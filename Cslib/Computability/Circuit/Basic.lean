@@ -119,4 +119,8 @@ def Circuit.trace
     (x : Fin inputCount → U) : Fin (inputCount + gateCount + outputCount) → U :=
   Fin.addCases (c.program.trace i x) (c.eval i x)
 
+/-- Doubling a natural number adds it to itself. -/
+theorem demo_two_mul (n : Nat) : 2 * n = n + n :=
+  Nat.two_mul n
+
 end Cslib.Circuits
